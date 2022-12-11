@@ -1,0 +1,65 @@
+<h2> Homme List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Name</th>
+            <th> Price </th>
+            <th> Quantity</th>
+            <th><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add New Product </button></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let homme of produitH" >
+            <td> {{ homme.name }} </td>
+            <td> {{ homme.prix }} </td>
+            <td> {{ homme.quantite }} </td>
+            <td>
+                <button (click) = "updateProduitH(homme.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteProduitH(homme.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form (ngSubmit) = "onSubmit()">
+
+          <div class="form-group">
+              <label> Name</label>
+              <input type="text" class ="form-control" id = "name"
+                  [(ngModel)] = "produit.name" name = "name">
+          </div>
+
+          <div class="form-group">
+              <label> Prix</label>
+              <input type="text" class ="form-control" id = "prix"
+                  [(ngModel)] = "produit.prix" name = "prix">
+          </div>
+
+          <div class="form-group">
+              <label> Quantite</label>
+              <input type="text" class ="form-control" id = "quantite"
+                  [(ngModel)] = "produit.quantite" name = "quantite">
+          </div>
+
+          <button class = "btn btn-success" type ="submit" data-bs-dismiss="modal" aria-label="Close">Submit</button>
+
+      </form>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -9,6 +9,10 @@ import { ListComponent } from './ProductF/list/list.component';
 import { UpdateFComponent } from './ProductF/update-f/update-f.component';
 import { UpdateHComponent } from './ProductH/update-h/update-h.component';
 import { UpdateEComponent } from './ProductE/update-e/update-e.component';
+import { List_hComponent } from './ProductH/list-h/list-h.component';
+import { List_eComponent } from './ProductE/list-e/list-e.component';
+import { HommeService } from './service/homme.service';
+import { EnfantService } from './service/enfant.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,10 @@ import { UpdateEComponent } from './ProductE/update-e/update-e.component';
     ListComponent,
     UpdateFComponent,
     UpdateHComponent,
-    UpdateEComponent
+    List_hComponent,
+    UpdateEComponent,
+    List_eComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -24,7 +31,7 @@ import { UpdateEComponent } from './ProductE/update-e/update-e.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [FemmeService],
+  providers: [FemmeService,HommeService,EnfantService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
