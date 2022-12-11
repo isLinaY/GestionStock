@@ -13,6 +13,8 @@ import { List_hComponent } from './ProductH/list-h/list-h.component';
 import { List_eComponent } from './ProductE/list-e/list-e.component';
 import { HommeService } from './service/homme.service';
 import { EnfantService } from './service/enfant.service';
+import { AccueilComponent } from './accueil/accueil.component';
+import { InterfaceComponent } from './interface/interface.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { EnfantService } from './service/enfant.service';
     List_hComponent,
     UpdateEComponent,
     List_eComponent,
-
+    AccueilComponent,
+    InterfaceComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,26 @@
+.navbar-container {
+    display: flex;
+    height: 48px;
+    justify-content: space-between;
+    background-image: linear-gradient(90deg, darkgray, lightgray 70%);
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: "Lato", "Helvetica Neue", sans-serif;
+}
+
+.home-button,
+.navbar-button {
+    padding: 5px 10px;
+}
+
+.navbar-buttons {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 4px;
+}
