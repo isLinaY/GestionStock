@@ -1,0 +1,17 @@
+<nav class="navbar-container">
+    <div class="navbar-logo">
+        <a routerLink="/accueil">
+            <div class="home-button">
+                Accueil
+            </div>
+        </a>
+    </div>
+    <div class="navbar-buttons">
+        <a *ngFor="let button of navButtons" [routerLink]="button?.url">
+            <div class="navbar-button">{{ button?.title }}</div>
+        </a>
+    </div>
+</nav>
+<ng-content></ng-content>
+<div class="arriere-plan">
+</div>
